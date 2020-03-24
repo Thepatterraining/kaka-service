@@ -1,0 +1,1 @@
+alter  table `cash_recharge` add  `cash_recharge_thirdplatdocno` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '第三方单号';

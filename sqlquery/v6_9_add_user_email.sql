@@ -1,0 +1,1 @@
+alter table `auth_user` add column `auth_emai` varchar(255) not null default '';

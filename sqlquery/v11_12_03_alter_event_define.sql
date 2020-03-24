@@ -1,0 +1,1 @@
+alter table `event_define` add `event_param` text COMMENT '事件参数';

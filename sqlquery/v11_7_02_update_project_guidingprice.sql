@@ -1,0 +1,1 @@
+update `project_guidingprice` set `project_price_ischeck` = 1;

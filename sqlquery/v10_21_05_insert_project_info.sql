@@ -1,0 +1,8 @@
+
+INSERT INTO `project_info` (`id`, `project_no`, `project_name`, `project_score`, `project_scorescale`, `project_investstype_id`, `project_investstype_name`, `project_current_status`, `project_current_status_name`, `project_current_status_display`, `project_current_status_index`, `project_status_start`, `project_status_end`, `project_scale`, `project_coinammount`, `project_bonustype`, `project_bonusperiods`, `project_starttime`, `project_holdtype`, `project_holderid`, `project_hold_last`, `created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`)
+VALUES
+	(null,'KKC-BJ0001','西城房产收益权001号',3.68,0,1,'谨慎型',1,'限时活动',1,1,'2017-10-21 12:00:00','2017-11-21 12:00:00',0.01000,50.500000000,2,28,'2017-10-21 12:00:00',00000000001,1,7,'2017-10-21 13:46:12','2017-10-21 13:46:12',NULL,2,NULL,NULL),
+	(null,'KKC-BJ0002','西城房产收益权002号',3.68,0,2,'稳健型',1,'限时活动',1,1,'2017-10-21 12:00:00','2017-11-21 12:00:00',0.01000,36.800000000,2,32,'2017-10-21 12:00:00',00000000001,1,7,'2017-10-21 13:54:05','2017-10-21 13:54:05',NULL,2,NULL,NULL),
+	(null,'KKC-BJ0003','朝阳房产收益权003号',3.68,0,3,'平衡型',1,'限时活动',1,1,'2017-10-21 13:00:00','2017-11-21 13:00:00',0.01000,63.770000000,2,8,'2017-10-21 13:00:00',00000000001,1,2,'2017-10-21 13:57:30','2017-10-21 13:57:30',NULL,2,NULL,NULL),
+	(null,'KKC-BJ0004','西城房产收益权004号',3.68,0,4,'进取型',2,'新上项目',1,2,'2017-10-21 13:00:00','2017-11-21 13:00:00',0.01000,48.500000000,2,28,'2017-10-21 13:00:00',00000000001,1,7,'2017-10-21 14:00:07','2017-10-21 14:00:07',NULL,2,NULL,NULL),
+	(null,'KKC-BJ0005','美国房产001号',3.68,0,5,'激进型',2,'新上项目',1,2,'2017-10-21 14:00:00','2017-11-21 14:00:00',0.10000,146.780000000,2,12,'2017-10-21 14:00:00',00000000001,1,7,'2017-10-21 14:03:08','2017-10-21 14:03:08',NULL,2,NULL,NULL);

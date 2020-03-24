@@ -1,0 +1,8 @@
+INSERT INTO `item_coordinate` (`coordinate_x`, `coordinate_y`, `school_name`, `coin_type`, `type`, `created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`, `sort`)
+VALUES
+	(116.3564480000,39.9119830000,'北京市育民小学','KKC-BJ0004','IC02',NULL,NULL,NULL,NULL,NULL,NULL,1),
+	(116.3683340000,39.9176910000,'北京市第八中学','KKC-BJ0004','IC02',NULL,NULL,NULL,NULL,NULL,NULL,2),
+	(116.3766200000,39.9465350000,'北京市三十五中学','KKC-BJ0004','IC02',NULL,NULL,NULL,NULL,NULL,NULL,3),
+	(116.3952990000,39.9071390000,'北京市一六一中学','KKC-BJ0004','IC02',NULL,NULL,NULL,NULL,NULL,NULL,4),
+	(116.3730490000,39.9197630000,'北师大附属实验中学分校','KKC-BJ0004','IC02',NULL,NULL,NULL,NULL,NULL,NULL,5),
+	(116.3561200000,39.9422860000,'西城外国语学校初中部正门','KKC-BJ0004','IC02',NULL,NULL,NULL,NULL,NULL,NULL,6);

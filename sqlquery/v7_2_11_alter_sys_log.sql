@@ -1,0 +1,1 @@
+alter  table `sys_log` modify  `dumpinfo` text;

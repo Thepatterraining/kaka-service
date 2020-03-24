@@ -1,0 +1,1 @@
+alter table `report_userrb_sub_day` add `report_rbbuy_totalresult` decimal(20,3) DEFAULT NULL COMMENT '消费累计总返佣';

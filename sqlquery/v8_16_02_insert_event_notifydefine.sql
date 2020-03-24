@@ -1,0 +1,3 @@
+INSERT INTO `event_notifydefine` (`id`, `notify_name`, `notify_event`, `notify_filter`, `notify_type`, `notify_specialclass`,`notify_level`,`notify_fmt`,`created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`)
+VALUES
+	(null,"运营组获知大额充值",2,"select created_at from cash_recharge where cash_recharge_amount>=50000 and id= ?",'NT01',"App\Data\Cash\RechargeData",2,NULL,NULL,null,NULL,NULL,NULL,null);

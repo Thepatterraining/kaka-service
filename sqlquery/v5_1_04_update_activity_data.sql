@@ -1,0 +1,19 @@
+
+
+
+-- 插入 activity_group 表 
+
+INSERT INTO `activity_group` (`id`, `group_no`, `group_name`, `group_type`, `created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`)
+VALUES
+	(null,'AG2017051118081854035','线下活动组','AGT01','2017-05-11 18:08:18','2017-05-11 18:08:18',NULL,262,NULL,NULL);
+
+-- 插入 activity_groupitem 表
+
+INSERT INTO `activity_groupitem` (`id`, `group_itemno`, `group_no`, `group_activity`, `created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`)
+VALUES
+	(null,'GI2017051122512361388','AG2017051118081854035','SA20170402193540898',NULL,NULL,NULL,NULL,NULL,NULL),
+	(null,'GI2017051122512361388','AG2017051118081854035','SA2017051122512391389','2017-05-11 22:51:23','2017-05-11 22:51:23',NULL,262,NULL,NULL),
+	(null,'GI2017051122544831032','AG2017051118081854035','SA2017051122544727328','2017-05-11 22:54:48','2017-05-11 22:54:48',NULL,262,NULL,NULL),
+  (null,'GI2017051122512361389','AG2017051118081854035','SA2017051122512391389','2017-05-11 22:51:23','2017-05-11 22:51:23',NULL,262,NULL,NULL),
+	(null,'GI2017051122544831033','AG2017051118081854035','SA2017051122544727328','2017-05-11 22:54:48','2017-05-11 22:54:48',NULL,262,NULL,NULL);
+

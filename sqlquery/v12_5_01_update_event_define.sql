@@ -1,0 +1,1 @@
+update `event_define` set `event_observer` = 'App\\Observers\\BonusItemObserver' where `event_observer` = 'App\\Observers\\ProjBonusItemObserver';

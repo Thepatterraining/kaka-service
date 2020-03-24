@@ -1,0 +1,3 @@
+INSERT INTO `activity_info` (`activity_no`, `activity_name`, `activity_start`, `activity_end`, `activity_limittype`, `activity_event`, `activity_limitcount`, `activity_count`, `activity_filter`, `activity_code`, `activity_status`, `created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`)
+VALUES
+	('SA2017091516244529027','满100减100分组','2017-05-01 00:00:00','2017-05-01 00:00:00','AL02','',500,8,'','','AS01','2017-09-13 13:24:45','2017-09-15 16:18:42',NULL,2,NULL,NULL);

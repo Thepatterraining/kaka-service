@@ -1,0 +1,1 @@
+update `voucher_info` set `voucher_note` = 'KKC-BJ0002' where `voucher_note` = '西城房产收益权002号';

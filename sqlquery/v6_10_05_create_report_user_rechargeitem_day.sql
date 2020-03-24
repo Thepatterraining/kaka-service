@@ -1,0 +1,23 @@
+CREATE TABLE `report_user_rechargeitem_day` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `report_no` varchar(255) DEFAULT NULL COMMENT '报表编号',
+  `report_recharge_channel_id` int(11) DEFAULT NULL COMMENT '报表通道编号',
+  `report_recharge_type` varchar(255) DEFAULT NULL COMMENT '充值类型',
+  `report_initcount` bigint(20) DEFAULT NULL COMMENT '初始充值笔数',
+  `report_rechargecount` bigint(20) DEFAULT NULL COMMENT '充值笔数',
+  `report_resultcount` bigint(20) DEFAULT NULL COMMENT '期末充值笔数',
+  `report_initinv` bigint(20) DEFAULT NULL COMMENT '初始充值人数',
+  `report_rechargeinv` bigint(20) DEFAULT NULL COMMENT '本期新增充值人数',
+  `report_resultinv` bigint(20) DEFAULT NULL COMMENT '初始充值人数',
+  `report_initcash` decimal(20,3) DEFAULT NULL COMMENT '初始充值金额',
+  `report_rechargecash` decimal(20,3) DEFAULT NULL COMMENT '充值金额',
+  `report_resultcash` decimal(20,3) DEFAULT NULL COMMENT '期末充值金额',
+  `report_date` date DEFAULT NULL COMMENT '报表日期',
+  `created_at` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated_at` datetime DEFAULT NULL COMMENT '更新时间',
+  `deleted_at` datetime DEFAULT NULL COMMENT '删除时间',
+  `created_id` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `updated_id` bigint(20) DEFAULT NULL COMMENT '更新人',
+  `deleted_id` bigint(20) DEFAULT NULL COMMENT '删除人',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

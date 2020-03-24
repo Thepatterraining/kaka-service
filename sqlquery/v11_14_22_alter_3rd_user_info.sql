@@ -1,0 +1,1 @@
+alter table `3rd_user_info` add `binding_time` datetime not null DEFAULT '1970-01-01' COMMENT '绑定时间';

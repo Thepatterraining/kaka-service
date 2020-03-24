@@ -1,0 +1,2 @@
+create table tmp_voucher_storage (select * from voucher_storage);
+update voucher_storage set vaucherstorage_no = concat(left(vaucherstorage_no,17),substr(round((rand()+1)*100000),2)) ,updated_at = now() where voucherstorage_status = 'VOUS00' and  (voucherstorage_jobno ='' or voucherstorage_jobno = 'null');

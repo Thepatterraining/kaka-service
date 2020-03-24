@@ -1,0 +1,1 @@
+update `project_info` set `project_type` = 2 where `project_no` = 'KKC-BJ0005';

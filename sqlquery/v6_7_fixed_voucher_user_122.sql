@@ -1,0 +1,1 @@
+ update   voucher_storage set  voucherstorage_status = 'VOUS00' ,voucherstorage_jobno='',voucherstorage_usetime='1970-1-1' where vaucherstorage_no =  'VCS2017060523375586235';  

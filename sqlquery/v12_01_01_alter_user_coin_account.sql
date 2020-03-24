@@ -1,0 +1,2 @@
+alter table `user_coin_account` modify `usercoin_cash` decimal(20,9) NOT NULL DEFAULT 0 COMMENT '余额';
+alter table `user_coin_account` modify `usercoin_pending` decimal(20,9) NOT NULL DEFAULT 0 COMMENT '在途金额';

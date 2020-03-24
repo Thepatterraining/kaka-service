@@ -1,0 +1,2 @@
+alter table `activity_invitationcode` add `invite_type` char(20) not null default ' ' COMMENT "邀请类型";
+alter table `activity_invitationcode` add `invite_maxcount` bigint not null default '0' COMMENT "使用数量";

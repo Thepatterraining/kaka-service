@@ -1,0 +1,1 @@
+update `sys_user_vp` set `deleted_at` = '2017-11-17 15:00:00' where `user_id` = 7;

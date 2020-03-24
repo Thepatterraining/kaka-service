@@ -1,0 +1,1 @@
+alter table `project_info` add `project_type` bigint DEFAULT 1 COMMENT 'project_type.id';

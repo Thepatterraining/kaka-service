@@ -1,0 +1,3 @@
+INSERT INTO `voucher_info` (`vaucher_no`, `vaucher_name`, `vaucher_type`, `voucher_val1`, `voucher_val2`, `voucher_val3`, `voucher_val4`, `voucher_model`, `voucher_event`, `voucher_filter`, `voucher_timespan`, `voucher_count`, `voucher_usecount`, `voucher_timeoutcount`, `voucher_locktime`, `created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`, `voucher_model_getting`, `voucher_model_getted`, `voucher_model_useing`, `voucher_model_used`, `voucher_note`)
+VALUES
+	('VCN2017091515534490275','满100减100','VC01',100.00,100.00,0.00,0.00,'','','',7776000,0,0,0,7776000,'2017-09-15 16:17:33','2017-09-15 16:17:33',NULL,0,NULL,NULL,'','','App\\Data\\Voucher\\UsingVoucherSpecial','','西城房产收益权002号');

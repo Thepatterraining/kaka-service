@@ -1,0 +1,1 @@
+alter  table `user_bank_account` add  `account_mobile` VARCHAR(255) NOT NULL DEFAULT '' COMMENT '银行预留手机号';

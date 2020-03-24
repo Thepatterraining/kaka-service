@@ -1,0 +1,43 @@
+drop table `event_define`;
+CREATE TABLE `event_define` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `event_name` varchar(255) DEFAULT NULL COMMENT '事件名称',
+  `event_key` varchar(255) DEFAULT NULL COMMENT '事件key',
+  `event_model` varchar(255) DEFAULT NULL COMMENT '定义类',
+  `event_type` char(30) DEFAULT NULL COMMENT '定义事件',
+  `event_filter` varchar(255) DEFAULT NULL COMMENT '条件',
+  `event_level` char(30) DEFAULT NULL COMMENT '优先级',
+  `event_queue_type` varchar(255) DEFAULT NULL COMMENT '队列类型',
+  `event_observer` varchar(255) DEFAULT NULL COMMENT '观察类',
+  `created_at` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated_at` datetime DEFAULT NULL COMMENT '更新时间',
+  `deleted_at` datetime DEFAULT NULL COMMENT '删除时间',
+  `created_id` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `updated_id` bigint(20) DEFAULT NULL COMMENT '更新人',
+  `deleted_id` bigint(20) DEFAULT NULL COMMENT '删除人',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `event_define` (`id`, `event_name`, `event_key`, `event_model`, `event_type`, `event_filter`, `event_level`, `event_queue_type`, `event_observer`, `created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`)
+VALUES
+	(null,"每日汇总",null,'App\\Data\\Notify\\INotifyData','NY01',null,1,null,null,NULL,NULL,null,NULL,NULL,NULL),
+    (null,"大额充值","created","App\\Model\\Cash\\Recharge","NY04",null,1,null,null,NULL,NULL,null,NULL,NULL,NULL),
+    (null,"挂买单","created","App\\Model\\Trade\\TranactionBuy","NY00",null,1,"transaction","App\\Observers\\TransactionBuyObserver",NULL,NULL,null,NULL,NULL,NULL),
+	(null,"挂卖单","created","App\\Model\\Trade\\TranactionSell","NY00",null,1,"transaction","App\\Observers\\TransactionSellObserver",NULL,NULL,null,NULL,NULL,NULL),
+	(null,"交易","created","App\\Model\\Trade\\TranactionOrder","NY00",null,1,"transaction","App\\Observers\\TransactionOrderObserver",NULL,NULL,null,NULL,NULL,NULL),
+	(null,"登陆记录","created","App\\Model\\Sys\\LoginLog","NY00",null,1,"","App\\Observers\\LoginLogObserver",NULL,NULL,null,NULL,NULL,NULL),
+    (null,"挂买单","updated","App\\Model\\Trade\\TranactionBuy","NY00",null,1,"transaction","App\\Observers\\TransactionBuyObserver",NULL,NULL,null,NULL,NULL,NULL),
+	(null,"挂卖单","updated","App\\Model\\Trade\\TranactionSell","NY00",null,1,"transaction","App\\Observers\\TransactionSellObserver",NULL,NULL,null,NULL,NULL,NULL),
+	(null,"交易","updated","App\\Model\\Trade\\TranactionOrder","NY00",null,1,"transaction","App\\Observers\\TransactionOrderObserver",NULL,NULL,null,NULL,NULL,NULL),
+    (null,"挂买单","deleted","App\\Model\\Trade\\TranactionBuy","NY00",null,1,"transaction","App\\Observers\\TransactionBuyObserver",NULL,NULL,null,NULL,NULL,NULL),
+	(null,"挂卖单","deleted","App\\Model\\Trade\\TranactionSell","NY00",null,1,"transaction","App\\Observers\\TransactionSellObserver",NULL,NULL,null,NULL,NULL,NULL),
+	(null,"交易","deleted","App\\Model\\Trade\\TranactionOrder","NY00",null,1,"transaction","App\\Observers\\TransactionOrderObserver",NULL,NULL,null,NULL,NULL,NULL),
+    (null,"代币对账错误",null,null,'NY05','App\\Data\\Notify\\INotifyData',1,null,null,NULL,NULL,null,NULL,NULL,NULL),
+	(null,"现金对账错误",null,null,'NY06','App\\Data\\Notify\\INotifyData',1,null,null,NULL,NULL,null,NULL,NULL,NULL),
+	(null,"DB错误","created",'App\\Model\\Sys\\Log','NY07','\\App\\Data\\Notify\\INotifyData',1,"","App\\Observers\\DBErrorObserver",null,NULL,null,NULL,NULL,NULL),
+    (null,'分红到账','updated','App\\Model\\Bonus\\ProjBonus','NY00',NULL,'1','','App\\Observers\\BonusObserver',NULL,NULL,NULL,NULL,NULL,NULL),
+    (null,'充值','updated','App\\Model\\Cash\\Recharge','NY00',NULL,'1','','App\\Observers\\RechargeObserver',NULL,NULL,NULL,NULL,NULL,NULL),
+	(null,'提现','updated','App\\Model\\Cash\\Withdrawal','NY00',NULL,'1','','App\\Observers\\WithdrawalObserver',NULL,NULL,NULL,NULL,NULL,NULL),
+    (null,'新手标','updated','App\\Model\\Lending\\LendingDocInfo','NY00',NULL,'1','','App\\Observers\\LendingDocInfoObserver',NULL,NULL,NULL,NULL,NULL,NULL),
+	(null,'提现','updated','App\\Model\\App\\UserInfo','NY00',NULL,'1','','App\\Observers\\UserInfoObserver',NULL,NULL,NULL,NULL,NULL,NULL),
+	(null,'分红','updated','App\\Model\\Bonus\\ProjBonusItem','NY00',NULL,'1','','App\\Observers\\ProjBonusItemObserver',NULL,NULL,NULL,NULL,NULL,NULL),
+    (null,'注册','created','App\\Model\\User\\User','NY00',NULL,'1','','App\\Observers\\RegSurveyObserver',NULL,NULL,NULL,NULL,NULL,NULL);

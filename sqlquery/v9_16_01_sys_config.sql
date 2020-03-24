@@ -1,0 +1,1 @@
+update `sys_config` set `config_value` = '/upload/contract/gongzhang_kaka.png' where `config_key` = 'COMPANY_SIGN';

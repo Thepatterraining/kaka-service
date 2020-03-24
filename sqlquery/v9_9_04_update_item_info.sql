@@ -1,0 +1,1 @@
+update `item_info` set `price` = 1165 where `coin_type` = 'KKC-BJ0004';

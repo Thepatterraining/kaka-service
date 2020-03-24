@@ -1,0 +1,1 @@
+alter table `proj_bonusitem` add `bonus_cycle` varchar(30) NOT NULL DEFAULT '' COMMENT 'PBSC01 按天 PBSC02 按周 PBSC03 按月 PBSC04 按季 PBSC05 按年';

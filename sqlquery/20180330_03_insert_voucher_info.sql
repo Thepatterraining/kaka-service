@@ -1,0 +1,7 @@
+
+INSERT INTO `voucher_info` (`id`, `vaucher_no`, `vaucher_name`, `vaucher_type`, `voucher_val1`, `voucher_val2`, `voucher_val3`, `voucher_val4`, `voucher_model`, `voucher_event`, `voucher_filter`, `voucher_timespan`, `voucher_count`, `voucher_usecount`, `voucher_timeoutcount`, `voucher_locktime`, `created_at`, `updated_at`, `deleted_at`, `created_id`, `updated_id`, `deleted_id`, `voucher_model_getting`, `voucher_model_getted`, `voucher_model_useing`, `voucher_model_used`, `voucher_note`)
+VALUES
+	(null,'VCN2018033017042590276','满1000减10','VC01',1000.00,10.00,0.00,0.00,'','','',7776000,0,0,0,0,'2017-05-07 23:07:05','2018-03-30 17:40:45',NULL,0,NULL,NULL,'','','','',''),
+	(null,'VCN2018033017042590336','满2000减20','VC01',2000.00,20.00,0.00,0.00,'','','',7776000,0,0,0,0,'2017-05-07 23:07:05','2018-03-30 17:40:45',NULL,0,NULL,NULL,'','','','',''),
+	(null,'VCN2018033017042597683','满5000减50','VC01',5000.00,50.00,0.00,0.00,'','','',7776000,0,0,0,0,'2017-05-07 23:07:05','2018-03-30 17:40:45',NULL,0,NULL,NULL,'','','','',''),
+	(null,'VCN2018033017042596983','满10000减100','VC01',10000.00,100.00,0.00,0.00,'','','',7776000,0,0,0,0,'2017-05-07 23:07:05','2018-03-30 17:40:45',NULL,0,NULL,NULL,'','','','','');

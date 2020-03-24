@@ -1,0 +1,23 @@
+CREATE TABLE `report_user_coinitem_day` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `report_no` varchar(255) DEFAULT NULL COMMENT '报表编号',
+  `report_cointype` varchar(255) DEFAULT NULL COMMENT '代币类型',
+  `report_initcount` decimal(20,9) DEFAULT NULL COMMENT '初始值',
+  `report_initpending` decimal(20,9) DEFAULT NULL COMMENT '初始在途',
+  `report_recharge` decimal(20,9) DEFAULT NULL COMMENT '存入',
+  `report_withdrawal` decimal(20,9) DEFAULT NULL COMMENT '提取',
+  `report_buy` decimal(20,9) DEFAULT NULL COMMENT '买入',
+  `report_sell` decimal(20,9) DEFAULT NULL COMMENT '卖出',
+  `report_frozen` decimal(20,9) DEFAULT NULL COMMENT '冻结',
+  `report_count` decimal(20,9) DEFAULT NULL COMMENT '期末可用',
+  `report_pending` decimal(20,9) DEFAULT NULL COMMENT '期末在途',
+  `report_holding` decimal(20,9) DEFAULT NULL COMMENT '期末持仓',
+  `report_date` date DEFAULT NULL COMMENT '报表日期',
+  `created_at` datetime DEFAULT NULL COMMENT '创建时间',
+  `updated_at` datetime DEFAULT NULL COMMENT '更新时间',
+  `deleted_at` datetime DEFAULT NULL COMMENT '删除时间',
+  `created_id` bigint(20) DEFAULT NULL COMMENT '创建人',
+  `updated_id` bigint(20) DEFAULT NULL COMMENT '更新人',
+  `deleted_id` bigint(20) DEFAULT NULL COMMENT '删除人',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -1,0 +1,1 @@
+alter table `lending_docinfo` add `project_name` varchar(255) NOT NULL DEFAULT '' COMMENT '项目名';

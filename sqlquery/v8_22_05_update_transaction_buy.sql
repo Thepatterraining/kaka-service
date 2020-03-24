@@ -1,0 +1,2 @@
+alter table `transaction_sell` add `sell_totalammount` decimal(20,3) NOT NULL DEFAULT 0 COMMENT '成交总价';
+alter table `transaction_buy` add `buy_totalammount` decimal(20,3) NOT NULL DEFAULT 0 COMMENT '成交总价';
