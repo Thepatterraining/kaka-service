@@ -36,6 +36,8 @@ class CashOrderData extends IDatafactory
     const BONUS_TYPE = 'UCORDER11';
     const BORROW_TYPE = 'UCORDER12';
     const USER_RETURN_TYPE = 'UCORDER13';
+    const USER_CLEAR_TYPE = 'UCORDER20';
+
 
     private $_typeToData = [
         CashOrderData::BUY_TYPE => 'App\Data\Trade\TranactionOrderData',

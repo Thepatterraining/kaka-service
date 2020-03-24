@@ -62,7 +62,7 @@ class ClearCoinBill extends Command
         foreach($list as $cashJ) {
             $this->info('金额：'.$cashJ->usercash_journal_in);
             $this->info('余额：'.$cashJ->usercash_result_cash);
-            $data->add('', $cashJ->usercash_journal_in,$type,$cashJ->usercash_result_cash, $cashJ->usercash_journal_userid);
+            $data->add('', $cashJ->usercash_journal_in,CashOrderData::USER_CLEAR_TYPE,$cashJ->usercash_result_cash, $cashJ->usercash_journal_userid);
         }
 
         $this->info('结算成功');
