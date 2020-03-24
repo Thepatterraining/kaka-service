@@ -63,6 +63,7 @@ class Kernel extends ConsoleKernel
     Commands\AddNewerProject::class,
     Commands\NewApplication::class,
     \Cybereits\Application\Command\AppRelease::class,
+    Commands\ClearCoinType::class,
     ];
     
     /**
