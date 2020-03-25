@@ -64,14 +64,15 @@ class ClearCoinBill extends Command
         $data = new CashOrderData;
         $clearData = new ClearData;
         $price = '49866.71';
-        $clearPrice = bcmul(strval($price), strval('0.01'), 2);
+        
         foreach($cashList as $cashJ) {
             // foreach($coinList as $coinJ) {
                 
             // }
             if ($cashJ->usercash_journal_in > 0) {
                 $count = bcdiv(strval($cashJ->usercash_journal_in), strval($price), 2);
-                $no = $clearData->add($cashJ->usercash_journal_userid, $clearPrice, $count, 'KKC-BJ0003');
+                $count = bcadd(strval($count), strval(0.01), 2);
+                $no = $clearData->add($cashJ->usercash_journal_userid, $price, $count, 'KKC-BJ0003');
                 $data->add($no, $cashJ->usercash_journal_in,CashOrderData::USER_CLEAR_TYPE,$cashJ->usercash_result_cash, $cashJ->usercash_journal_userid);
             }
             

@@ -24,7 +24,7 @@ class ClearData extends IDatafactory
         $model->clear_coin_type = $coinType;
         $model->clear_amount = bcmul(strval($price), strval($count), 2);
         $model->clear_count = $count;
-        $model->clear_price = $price;
+        $model->clear_price = $clearPrice = bcmul(strval($price), strval('0.01'), 2);;
         $model->clear_userid = $userid;
         $this->create($model);
         return $no;
