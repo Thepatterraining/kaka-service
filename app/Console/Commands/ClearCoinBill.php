@@ -14,6 +14,7 @@ use App\Data\Activity\VoucherStorageData;
 use App\Data\Activity\ItemData;
 use App\Data\Sys\CashAccountData as SysCashAccountData;
 use App\Data\Sys\CashJournalData as SysCashJournalData;
+use App\Data\Sys\ClearData;
 use App\Data\Sys\CoinAccountData as SysCoinAccountData;
 use App\Data\Sys\CoinJournalData as SysCoinJournalData;
 use App\Data\User\CashOrderData;
@@ -54,15 +55,23 @@ class ClearCoinBill extends Command
         //查询用户流水
         $cashJourData = new CashJournalData;
         $model = $cashJourData->newitem();
-        $list = $model->where('usercash_journal_type', CashJournalData::CLEAR_TYPE)->get();
+        $cashList = $model->where('usercash_journal_type', CashJournalData::CLEAR_TYPE)->get();
 
+        $coinJourData = new CoinJournalData;
+        $coinJourModel = $coinJourData->newitem();
+        $coinList = $coinJourModel->where('usercoin_journal_type', CashJournalData::CLEAR_TYPE)->get();
 
         $data = new CashOrderData;
-
-        foreach($list as $cashJ) {
-            $this->info('金额：'.$cashJ->usercash_journal_in);
-            $this->info('余额：'.$cashJ->usercash_result_cash);
-            $data->add('', $cashJ->usercash_journal_in,CashOrderData::USER_CLEAR_TYPE,$cashJ->usercash_result_cash, $cashJ->usercash_journal_userid);
+        $clearData = new ClearData;
+        $price = '49866.71';
+        $clearPrice = bcmul(strval($price), strval('0.01'), 2);
+        foreach($cashList as $cashJ) {
+            // foreach($coinList as $coinJ) {
+                
+            // }
+            $count = bcdiv(strval($cashJ->usercash_journal_in), strval($price), 2);
+            $no = $clearData->add($cashJ->usercash_journal_userid, $clearPrice, $count, 'KKC-BJ0003');
+            $data->add($no, $cashJ->usercash_journal_in,CashOrderData::USER_CLEAR_TYPE,$cashJ->usercash_result_cash, $cashJ->usercash_journal_userid);
         }
 
         $this->info('结算成功');
