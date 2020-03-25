@@ -26,6 +26,7 @@ class ClearData extends IDatafactory
         $model->clear_count = $count;
         $model->clear_price = $price;
         $model->clear_userid = $userid;
+        $this->create($model);
         return $no;
     }
 }

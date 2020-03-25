@@ -69,9 +69,12 @@ class ClearCoinBill extends Command
             // foreach($coinList as $coinJ) {
                 
             // }
-            $count = bcdiv(strval($cashJ->usercash_journal_in), strval($price), 2);
-            $no = $clearData->add($cashJ->usercash_journal_userid, $clearPrice, $count, 'KKC-BJ0003');
-            $data->add($no, $cashJ->usercash_journal_in,CashOrderData::USER_CLEAR_TYPE,$cashJ->usercash_result_cash, $cashJ->usercash_journal_userid);
+            if ($cashJ->usercash_journal_in > 0) {
+                $count = bcdiv(strval($cashJ->usercash_journal_in), strval($price), 2);
+                $no = $clearData->add($cashJ->usercash_journal_userid, $clearPrice, $count, 'KKC-BJ0003');
+                $data->add($no, $cashJ->usercash_journal_in,CashOrderData::USER_CLEAR_TYPE,$cashJ->usercash_result_cash, $cashJ->usercash_journal_userid);
+            }
+            
         }
 
         $this->info('结算成功');
