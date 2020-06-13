@@ -370,6 +370,7 @@ class CashAccountData extends IDatafactory
         $userCashJournalData->add('', $orderNo, $userCashAccountRes, 0, $type, $status, $in, 0, $userid, $date);
     
         $lockData->unlock($key);
+        return $userCashAccountRes;
     }
 
 

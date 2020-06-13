@@ -38,8 +38,8 @@ class GetCashOrder extends QueryController
      *              "id" => 510
      *               "no" => "UCO2017052616592377863" 资金单号
      *               "type" => array:2 [  状态
-     *               "no" => "UCORDER05"
-     *               "name" => "充值"
+        *               "no" => "UCORDER05"
+        *               "name" => "充值"
      *               ]
      *               "jobno" => "CR2017052616592378773"  关联单号
      *               "price" => "3580.000"   金额
