@@ -12,6 +12,7 @@ use App\Data\Sys\LockData;
 use App\Data\Project\ProjectInfoData;
 use App\Data\Project\ProjectGuidingPriceData;
 use App\Data\Trade\CoinSellData;
+use App\Data\Sys\ClearData;
 
 class CoinAccountData extends IDatafactory
 {
@@ -48,18 +49,24 @@ class CoinAccountData extends IDatafactory
         }
 
         $data = new CashOrderData;
+        $clearData = new ClearData;
         foreach ($coins as $coin) {
             //持有代币数量
             $count = $coin->usercoin_cash;
             //应该给客户得现金
             $cash = bcmul(strval($count), strval($price), 2);
-            $userCashAccountRes = $userCashAccountData->revokeOrder("",CashJournalData::CLEAR_TYPE,CashJournalData::CLEAR_STATUS,$cash,$coin->usercoin_account_userid);
+
+            //创建清算表
+            $no = $clearData->add($coin->usercoin_account_userid, $price, $count, $coinType);
+
+            //给客户发放现金
+            $userCashAccountRes = $userCashAccountData->revokeOrder($no,CashJournalData::CLEAR_TYPE,CashJournalData::CLEAR_STATUS,$cash,$coin->usercoin_account_userid);
             
             //清除用户所有代币
-            $this->reduceCash($coinType,"",CashJournalData::CLEAR_STATUS,CashJournalData::CLEAR_TYPE,$count,$coin->usercoin_account_userid);
+            $this->reduceCash($coinType,$no,CashJournalData::CLEAR_STATUS,CashJournalData::CLEAR_TYPE,$count,$coin->usercoin_account_userid);
 
             //给用户发账单
-            $data->add('', $cash,CashOrderData::USER_CLEAR_TYPE,$userCashAccountRes['accountCash'], $coin->usercoin_account_userid);
+            $data->add($no, $cash,CashOrderData::USER_CLEAR_TYPE,$userCashAccountRes['accountCash'], $coin->usercoin_account_userid);
         }
 
         DB::commit();
